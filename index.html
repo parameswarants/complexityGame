@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complexity Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">SYSTEMS THINKING GAME</p>
+                <h1>The Complexity Game</h1>
+            </div>
+            <div class="round-box">
+                <span>ROUND</span>
+                <strong id="roundNumber">1 / 8</strong>
+            </div>
+        </header>
+
+        <section class="state-panel">
+            <div class="state-card">
+                <div class="state-label">
+                    <span>VALUE</span>
+                    <span id="valueNumber"></span>
+                </div>
+                <div class="bar"><div id="valueBar" class="bar-fill"></div></div>
+                <p>Value currently delivered by the system.</p>
+            </div>
+
+            <div class="state-card">
+                <div class="state-label">
+                    <span>AGILITY</span>
+                    <span id="agilityNumber"></span>
+                </div>
+                <div class="bar"><div id="agilityBar" class="bar-fill"></div></div>
+                <p>Ability of the system to respond and adapt.</p>
+            </div>
+
+            <div class="state-card">
+                <div class="state-label">
+                    <span>COMPLEXITY</span>
+                    <span id="complexityNumber"></span>
+                </div>
+                <div class="bar"><div id="complexityBar" class="bar-fill"></div></div>
+                <p>Accumulated difficulty of operating and changing the system.</p>
+            </div>
+        </section>
+
+        <section id="gameArea">
+            <section class="situation">
+                <p class="eyebrow">THE SITUATION</p>
+                <h2 id="situationText"></h2>
+            </section>
+
+            <section class="decision-section">
+                <p class="eyebrow">MAKE YOUR DECISION</p>
+                <div id="decisionButtons" class="decisions"></div>
+            </section>
+
+            <section id="consequencePanel" class="consequence hidden">
+                <p class="eyebrow">WHAT HAPPENED</p>
+                <div id="consequenceText"></div>
+                <button id="nextButton" class="next-button">Continue</button>
+            </section>
+        </section>
+
+        <section id="endScreen" class="end-screen hidden">
+            <p class="eyebrow">GAME COMPLETE</p>
+            <h2 id="endTitle"></h2>
+            <p id="endDescription"></p>
+
+            <div class="final-state">
+                <div><span>Value</span><strong id="finalValue"></strong></div>
+                <div><span>Agility</span><strong id="finalAgility"></strong></div>
+                <div><span>Complexity</span><strong id="finalComplexity"></strong></div>
+            </div>
+
+            <button id="restartButton" class="next-button">Play Again</button>
+        </section>
+    </main>
+
+    <script src="complexity_game_moderate_curve.js"></script>
+</body>
+</html>
