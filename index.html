@@ -1,86 +1,237 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Complexity Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <main class="game">
+
+        <!-- HEADER -->
         <header class="topbar">
             <div>
                 <p class="eyebrow">SYSTEMS THINKING GAME</p>
                 <h1>The Complexity Game</h1>
+                <p class="tagline">Build the system. Live with the consequences.</p>
             </div>
+
             <div class="round-box">
                 <span>ROUND</span>
                 <strong id="roundNumber">1 / 8</strong>
             </div>
         </header>
 
+
+        <!-- GAME INTRODUCTION -->
+        <section class="intro">
+
+            <p class="intro-lead">
+                Every system starts simple. Then decisions accumulate.
+            </p>
+
+            <p class="intro-desc1">In this game, you will make eight decisions that gradually shape a system, with each decision affecting value, agility, and complexity, while earlier choices can change how later decisions behave.</p>
+
+            <div class="intro-principle">
+                <p class="eyebrow">THE IDEA</p>
+                <strong>
+                    A decision that makes sense in isolation can create
+                    consequences for the system as a whole.
+                </strong>
+            </div>
+
+            <div class="intro-guide">
+
+                <div>
+                    <strong>Value</strong>
+                    <span>What the system delivers.</span>
+                </div>
+
+                <div>
+                    <strong>Agility</strong>
+                    <span>How easily the system can respond and adapt.</span>
+                </div>
+
+                <div>
+                    <strong>Complexity</strong>
+                    <span>How difficult the system is to operate and change.</span>
+                </div>
+
+            </div>
+
+            <p class="intro-note">
+                There is no single correct path. The objective is not to
+                maximize one number, but to see what kind of system your
+                decisions create.
+            </p>
+
+        </section>
+
+
+        <!-- CURRENT SYSTEM STATE -->
         <section class="state-panel">
+
             <div class="state-card">
+
                 <div class="state-label">
                     <span>VALUE</span>
                     <span id="valueNumber"></span>
                 </div>
-                <div class="bar"><div id="valueBar" class="bar-fill"></div></div>
-                <p>Value currently delivered by the system.</p>
+
+                <div class="bar">
+                    <div id="valueBar" class="bar-fill"></div>
+                </div>
+
+                <p>
+                    Value currently delivered by the system.
+                </p>
+
             </div>
 
+
             <div class="state-card">
+
                 <div class="state-label">
                     <span>AGILITY</span>
                     <span id="agilityNumber"></span>
                 </div>
-                <div class="bar"><div id="agilityBar" class="bar-fill"></div></div>
-                <p>Ability of the system to respond and adapt.</p>
+
+                <div class="bar">
+                    <div id="agilityBar" class="bar-fill"></div>
+                </div>
+
+                <p>
+                    Ability of the system to respond and adapt.
+                </p>
+
             </div>
 
+
             <div class="state-card">
+
                 <div class="state-label">
                     <span>COMPLEXITY</span>
                     <span id="complexityNumber"></span>
                 </div>
-                <div class="bar"><div id="complexityBar" class="bar-fill"></div></div>
-                <p>Accumulated difficulty of operating and changing the system.</p>
+
+                <div class="bar">
+                    <div id="complexityBar" class="bar-fill"></div>
+                </div>
+
+                <p>
+                    Accumulated difficulty of operating and changing the system.
+                </p>
+
             </div>
+
         </section>
 
+
+        <!-- GAME AREA -->
         <section id="gameArea">
+
+            <!-- CURRENT SITUATION -->
             <section class="situation">
+
                 <p class="eyebrow">THE SITUATION</p>
+
                 <h2 id="situationText"></h2>
+
             </section>
 
+
+            <!-- DECISIONS -->
             <section class="decision-section">
+
                 <p class="eyebrow">MAKE YOUR DECISION</p>
+
                 <div id="decisionButtons" class="decisions"></div>
+
             </section>
 
+
+            <!-- CONSEQUENCES -->
             <section id="consequencePanel" class="consequence hidden">
+
                 <p class="eyebrow">WHAT HAPPENED</p>
+
                 <div id="consequenceText"></div>
-                <button id="nextButton" class="next-button">Continue</button>
+
+                <button id="nextButton" class="next-button">
+                    Continue
+                </button>
+
             </section>
+
         </section>
 
+
+        <!-- END SCREEN -->
         <section id="endScreen" class="end-screen hidden">
-            <p class="eyebrow">GAME COMPLETE</p>
+
+            <p class="eyebrow">SYSTEM COMPLETE</p>
+
             <h2 id="endTitle"></h2>
+
             <p id="endDescription"></p>
 
+
+            <!-- FINAL STATE -->
             <div class="final-state">
-                <div><span>Value</span><strong id="finalValue"></strong></div>
-                <div><span>Agility</span><strong id="finalAgility"></strong></div>
-                <div><span>Complexity</span><strong id="finalComplexity"></strong></div>
+
+                <div>
+                    <span>Value</span>
+                    <strong id="finalValue"></strong>
+                </div>
+
+                <div>
+                    <span>Agility</span>
+                    <strong id="finalAgility"></strong>
+                </div>
+
+                <div>
+                    <span>Complexity</span>
+                    <strong id="finalComplexity"></strong>
+                </div>
+
             </div>
 
-            <button id="restartButton" class="next-button">Play Again</button>
+
+            <!-- REFLECTION -->
+            <div class="reflection">
+
+                <p class="eyebrow">THE TAKEAWAY</p>
+
+                <p>
+                    The final state is the result of the decisions you made,
+                    the interactions between them, and the consequences that
+                    emerged as the system evolved.
+                </p>
+
+                <p>
+                    There was no perfect path. The question is whether the
+                    system you created can continue to deliver value as
+                    conditions change.
+                </p>
+
+            </div>
+
+
+            <button id="restartButton" class="next-button">
+                Play Again
+            </button>
+
         </section>
+
     </main>
 
+
     <script src="complexity_game_moderate_curve.js"></script>
+
 </body>
 </html>
