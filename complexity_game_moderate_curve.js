@@ -544,11 +544,11 @@ const r8Scenarios = {
 
 const rules = [
     {
-        id: "complexity_50",
-        description: "Complexity crossed 50. The system loses some agility.",
+        id: "complexity_45",
+        description: "Complexity crossed 45. The system loses some agility.",
         condition: function(previousState, newState) {
-            return previousState.complexity <= 50 &&
-                   newState.complexity > 50;
+            return previousState.complexity <= 45 &&
+                   newState.complexity > 45;
         },
         consequences: [
             { variable: "agility", change: -3 }
@@ -631,9 +631,9 @@ const rules = [
 let game = {
     round: 0,
     state: {
-        value: 50,
-        agility: 50,
-        complexity: 40
+    //    value: 40,
+    //    agility: 50,
+    //    complexity: 40
     },
     modifiers: {
         complexityMultiplier: 1
@@ -665,7 +665,7 @@ function startGame() {
     game = {
         round: 0,
         state: {
-            value: 50,
+            value: 40,
             agility: 50,
             complexity: 40
         },
@@ -852,7 +852,7 @@ function updateUI() {
 function updateState(variable) {
     const value = game.state[variable];
 
-    document.getElementById(variable + "Number").textContent = value;
+    document.getElementById(variable + "Number").textContent = value.toFixed(1);
     document.getElementById(variable + "Bar").style.width = value + "%";
 }
 
